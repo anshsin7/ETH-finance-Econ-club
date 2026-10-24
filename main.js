@@ -49,7 +49,8 @@ document.querySelectorAll(".member__photo").forEach((photo) => {
 //   e.g. const GOOGLE_FORM_URL = "https://forms.gle/abc123";
 //        const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/XXXX/viewform";
 // ---------------------------------------------------------------------------
-const GOOGLE_FORM_URL = ""; // <-- paste your Google Form link here
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSedQfZR-p9ubuzE7PhSC3b0HTdAiaklZm8yB8wHRzOrHWm72g/viewform";
 
 // Wire every "Open the Application" button to the Google Form.
 document.querySelectorAll(".js-apply").forEach((btn) => {
