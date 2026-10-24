@@ -373,11 +373,11 @@
         </div>
       </div>
 
-      <!-- IMPORTANT: replace FORM_ID below with your Formspree endpoint to receive real submissions.
-           CV uploads require a backend that accepts files (e.g. Formspree on a paid plan).
-           See README.md → "Wiring up the sign-up form" and "CV / file uploads". -->
+      <!-- Submissions (including the CV file) go to our own free Vercel function at /api/apply,
+           which stores the CV in Vercel Blob and optionally emails you via Formspree.
+           See README.md → "Free CV uploads (Vercel Blob)". -->
       <form class="form reveal" data-delay="1" id="signupForm"
-            action="https://formspree.io/f/xaqbpoel" method="POST"
+            action="/api/apply" method="POST"
             enctype="multipart/form-data" novalidate>
         <h3 class="form__title">Register your interest</h3>
         <p class="form__sub">Founding-board applications reviewed on a rolling basis.</p>

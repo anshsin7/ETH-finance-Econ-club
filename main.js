@@ -157,20 +157,9 @@ form.addEventListener("submit", async (e) => {
     localStorage.setItem("fe_signups", JSON.stringify(existing));
   } catch (_) {}
 
-  const action = form.getAttribute("action") || "";
-  const isConfigured = action && !action.includes("FORM_ID");
+  const action = form.getAttribute("action") || "/api/apply";
 
-  // If no real endpoint is configured yet, just confirm (dev/testing mode).
-  if (!isConfigured) {
-    console.warn(
-      "Sign-up form is not connected to a backend yet. " +
-        "Set the form's action to your Formspree endpoint in index.html to receive real submissions."
-    );
-    showConfirmation();
-    return;
-  }
-
-  // Send to the configured endpoint (e.g. Formspree).
+  // Send the whole form (text fields + CV file) as multipart to our backend.
   if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.textContent = "Submitting…";
@@ -178,20 +167,31 @@ form.addEventListener("submit", async (e) => {
   try {
     const res = await fetch(action, {
       method: form.method || "POST",
-      body: new FormData(form),
+      body: new FormData(form), // multipart/form-data incl. the CV file
       headers: { Accept: "application/json" },
     });
+
     if (res.ok) {
       showConfirmation();
-    } else {
-      throw new Error("Request failed: " + res.status);
+      return;
     }
+
+    // Try to surface a helpful message from the backend.
+    let msg = "Request failed (" + res.status + ")";
+    try {
+      const body = await res.json();
+      if (body && body.error) msg = body.error;
+    } catch (_) {}
+    throw new Error(msg);
   } catch (err) {
     console.error(err);
     if (submitBtn) {
       submitBtn.disabled = false;
       submitBtn.textContent = "Try again";
     }
-    alert("Something went wrong submitting the form. Please try again or email us directly.");
+    alert(
+      (err && err.message ? err.message : "Something went wrong submitting the form.") +
+        "\nPlease try again, or email us directly."
+    );
   }
 });

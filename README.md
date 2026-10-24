@@ -36,42 +36,50 @@ Or simply open `index.html` in a browser.
 See [`assets/README.md`](assets/README.md). Short version: drop images in `assets/` and swap the
 initials `<span>` for an `<img src="assets/your-photo.jpg">` inside each `.member__photo`.
 
-## Wiring up the sign-up form (IMPORTANT)
+## The application form (free, with CV uploads)
 
-**Out of the box the form does NOT email you anything** — it only saves a copy in the visitor's own
-browser (`localStorage`) as a testing fallback. To actually receive applications, connect it to a
-backend. The quickest option is **Formspree** (free tier, ~2 minutes):
+The board-application form includes a **CV upload** (drag-and-drop or browse, PDF/DOC/DOCX, max 5 MB,
+validated in the browser). The form POSTs everything — text fields **and** the CV file — to a small
+Vercel serverless function at [`/api/apply`](api/apply.js).
 
-1. Create a free account at [formspree.io](https://formspree.io).
-2. Create a new form — you'll get an endpoint like `https://formspree.io/f/abcdwxyz`.
-3. In `index.html`, find the sign-up `<form>` and replace `FORM_ID` in its `action`:
+This is **completely free** on Vercel's Hobby tier:
 
-   ```html
-   <form ... action="https://formspree.io/f/abcdwxyz" method="POST" ...>
-   ```
+- the function invocation is free,
+- the CV is stored in **Vercel Blob** (generous free allowance — plenty for a student club),
+- and the text details can optionally be emailed to you via a free Formspree endpoint.
 
-4. Deploy. Every submission now arrives in your email (and the Formspree dashboard).
+### Free setup (one-time, ~3 minutes)
 
-`main.js` already handles the rest: it POSTs via `fetch`, shows the "Thank you" state on success, and
-re-enables the button on failure. Prefer a Google Form instead? Just link the "Apply" buttons to it.
+1. **Add Vercel Blob** to your project: in the Vercel dashboard →
+   **Storage → Create → Blob**. Vercel automatically adds the `BLOB_READ_WRITE_TOKEN`
+   environment variable to the project.
+2. **(Optional) email notifications:** add an environment variable
+   `FORMSPREE_ENDPOINT = https://formspree.io/f/xaqbpoel` (your existing free Formspree form).
+   Each application then also lands in your email, with a link to the stored CV.
+3. **Redeploy.** That's it — applications and CVs are now received and stored at no cost.
 
-## CV / file uploads
+Where the CVs live: Vercel dashboard → **Storage → your Blob store** (files under `cvs/`). Each
+application's response also contains the direct CV URL.
 
-The application form includes a **CV upload** (drag-and-drop or browse) that accepts PDF/DOC/DOCX up to
-5 MB. File type and size are validated in the browser before submitting.
+> **Prefer zero code / zero setup?** A **Google Form** is also 100% free and stores CVs in Google Drive
+> automatically — just link the "Apply" buttons to it. The trade-off is that it sends visitors to a
+> Google-branded page instead of keeping them on your premium site.
 
-**A file can only reach you if the form's backend accepts uploads.** Important notes:
+### Local development
 
-- **Formspree:** file uploads are a **paid-plan** feature. On the free plan the text fields still work,
-  but the attached CV will not be delivered. Upgrade the Formspree form (or use another backend) to
-  receive CVs.
-- **Other options:** any endpoint that accepts `multipart/form-data` works — e.g. a Vercel serverless
-  function that stores the file in S3 / Vercel Blob, or a service like Basin or Getform.
-- The form is already set to `enctype="multipart/form-data"`, so no further markup changes are needed —
-  just point `action` at an upload-capable endpoint.
+```bash
+npm install
+npm run dev     # runs `vercel dev` — requires the Vercel CLI (`npm i -g vercel`)
+```
 
-> Note: for privacy, the CV **file** is never stored in the browser's localStorage fallback — only the
-> text fields and the file's name are kept locally for testing.
+Plain static preview (form submit won't hit the function):
+
+```bash
+python3 -m http.server 8000
+```
+
+> Privacy note: the CV **file** is never kept in the browser; only the text fields are cached in
+> `localStorage` as a testing fallback.
 
 ## Customising
 
