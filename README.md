@@ -55,6 +55,24 @@ backend. The quickest option is **Formspree** (free tier, ~2 minutes):
 `main.js` already handles the rest: it POSTs via `fetch`, shows the "Thank you" state on success, and
 re-enables the button on failure. Prefer a Google Form instead? Just link the "Apply" buttons to it.
 
+## CV / file uploads
+
+The application form includes a **CV upload** (drag-and-drop or browse) that accepts PDF/DOC/DOCX up to
+5 MB. File type and size are validated in the browser before submitting.
+
+**A file can only reach you if the form's backend accepts uploads.** Important notes:
+
+- **Formspree:** file uploads are a **paid-plan** feature. On the free plan the text fields still work,
+  but the attached CV will not be delivered. Upgrade the Formspree form (or use another backend) to
+  receive CVs.
+- **Other options:** any endpoint that accepts `multipart/form-data` works — e.g. a Vercel serverless
+  function that stores the file in S3 / Vercel Blob, or a service like Basin or Getform.
+- The form is already set to `enctype="multipart/form-data"`, so no further markup changes are needed —
+  just point `action` at an upload-capable endpoint.
+
+> Note: for privacy, the CV **file** is never stored in the browser's localStorage fallback — only the
+> text fields and the file's name are kept locally for testing.
+
 ## Customising
 
 - **Colours** — CSS custom properties at the top of `styles.css` (`--gold`, `--navy`, …).
