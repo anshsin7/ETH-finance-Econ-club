@@ -3,243 +3,391 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexus — ETH Interdisciplinary Finance &amp; Technology Initiative</title>
-  <meta name="description" content="A student-led interdisciplinary initiative at ETH Zurich bridging finance, technology, and quantitative sciences through education, research, and industry access." />
+  <title>ETH Finance &amp; Econ Club — Interdisciplinary Finance, Research &amp; Technology</title>
+  <meta name="description" content="An upcoming student-led initiative at ETH Zurich uniting the world's best minds across finance, economics, and technology — interdisciplinary education, research, and investment." />
+  <meta property="og:title" content="ETH Finance & Econ Club" />
+  <meta property="og:description" content="An upcoming student-led initiative at ETH Zurich bridging finance, economics, and technology." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Nav -->
+
+  <!-- ============ NAV ============ -->
   <header class="nav" id="top">
     <div class="container nav__inner">
       <a href="#top" class="brand">
-        <span class="brand__mark">N</span>
-        <span class="brand__text">Nexus<span class="brand__sub">ETH Zurich</span></span>
+        <span class="brand__mark">F&amp;E</span>
+        <span class="brand__text">
+          <span class="brand__name">Finance &amp; Econ Club</span>
+          <span class="brand__sub">ETH Zürich</span>
+        </span>
       </a>
-      <nav class="nav__links">
-        <a href="#problem">The Problem</a>
+      <nav class="nav__links" id="menu">
+        <a href="#about">About</a>
+        <a href="#pillars">Pillars</a>
+        <a href="#partners">Partners</a>
         <a href="#vision">Vision</a>
-        <a href="#objectives">Objectives</a>
-        <a href="#future">Future</a>
         <a href="#team">Team</a>
-        <a href="#join" class="btn btn--sm">Join</a>
+        <a href="#join" class="btn">Apply to the Board</a>
       </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__grid" aria-hidden="true"></div>
     <div class="container hero__inner">
-      <p class="eyebrow">A Student-Led Initiative · ETH Zurich</p>
+      <div class="hero__tag"><span class="upcoming-tag">Launching soon · ETH Zürich</span></div>
       <h1 class="hero__title">
-        Where <span class="grad">financial intelligence</span><br />
-        meets <span class="grad">technical excellence.</span>
+        The meeting point of<br />
+        <span class="gold-text"><em>capital</em> &amp; <em>intellect.</em></span>
       </h1>
       <p class="hero__lead">
-        A new interdisciplinary framework bringing together students from economics, finance,
-        computer science, and the quantitative sciences — to build the financial minds of the next decade.
+        An upcoming student-led initiative at ETH Zürich, uniting the world's most capable minds across
+        finance, economics, and technology — where rigorous analysis meets real-world ambition.
       </p>
       <div class="hero__cta">
-        <a href="#join" class="btn btn--lg">Become a Member</a>
-        <a href="#vision" class="btn btn--ghost btn--lg">Read the Vision</a>
+        <a href="#join" class="btn">Apply to the Founding Board</a>
+        <a href="#about" class="btn btn--ghost">Discover the Vision</a>
       </div>
-      <div class="hero__stats">
-        <div class="stat"><span class="stat__num">3</span><span class="stat__label">Partner universities targeted</span></div>
-        <div class="stat"><span class="stat__num">4</span><span class="stat__label">Strategic pillars</span></div>
-        <div class="stat"><span class="stat__num">DACH</span><span class="stat__label">Regional ambition &amp; beyond</span></div>
+      <div class="hero__meta">
+        <div class="stat">
+          <div class="stat__num">2026</div>
+          <div class="stat__label">Founding year — joining us early</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">∞</div>
+          <div class="stat__label">Interdisciplinary ambition</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">DACH</div>
+          <div class="stat__label">Regional reach &amp; beyond</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Marquee -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>Finance</span><span>·</span><span>Artificial Intelligence</span><span>·</span><span>Quantitative Research</span><span>·</span><span>Digital Assets</span><span>·</span><span>Investment Strategy</span><span>·</span><span>Macroeconomics</span><span>·</span>
-      <span>Finance</span><span>·</span><span>Artificial Intelligence</span><span>·</span><span>Quantitative Research</span><span>·</span><span>Digital Assets</span><span>·</span><span>Investment Strategy</span><span>·</span><span>Macroeconomics</span><span>·</span>
+  <!-- ============ TICKER ============ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span class="ticker__item">Investment Banking</span>
+      <span class="ticker__item">Private Equity</span>
+      <span class="ticker__item">Venture Capital</span>
+      <span class="ticker__item">Quantitative Research</span>
+      <span class="ticker__item">Asset Management</span>
+      <span class="ticker__item">Strategy Consulting</span>
+      <span class="ticker__item">Digital Assets</span>
+      <span class="ticker__item">Macroeconomics</span>
+      <span class="ticker__item">Investment Banking</span>
+      <span class="ticker__item">Private Equity</span>
+      <span class="ticker__item">Venture Capital</span>
+      <span class="ticker__item">Quantitative Research</span>
+      <span class="ticker__item">Asset Management</span>
+      <span class="ticker__item">Strategy Consulting</span>
+      <span class="ticker__item">Digital Assets</span>
+      <span class="ticker__item">Macroeconomics</span>
     </div>
   </div>
 
-  <!-- Problem -->
-  <section class="section" id="problem">
-    <div class="container">
-      <p class="eyebrow eyebrow--center">The Problem</p>
-      <h2 class="section__title">The world changed faster than the curriculum.</h2>
-      <p class="section__intro">
-        Talent is not scarce at institutions like ETH Zurich — but the pathways to apply it across
-        disciplines are fragmented. Two structural gaps hold ambitious students back.
-      </p>
-      <div class="cards cards--2">
-        <article class="card">
-          <div class="card__index">01</div>
-          <h3>Education vs. evolving skills</h3>
-          <p>
-            Artificial intelligence and data-driven methods are reshaping finance and consulting faster than
-            academic curricula can adapt. Domain expertise alone is no longer sufficient — adaptability,
-            quantitative fluency, and interdisciplinary reasoning have become essential.
-          </p>
+  <!-- ============ ABOUT / PROBLEM ============ -->
+  <section class="section" id="about">
+    <div class="container split">
+      <div class="split__aside">
+        <span class="kicker">The Thesis</span>
+        <h2 class="section__title">The world changed faster than the curriculum.</h2>
+        <p class="section__desc">
+          ETH Zürich attracts some of the most capable students in the world. Yet the pathways to apply that
+          talent across finance, economics, and technology remain fragmented. We exist to close that gap —
+          building the complete, modern financier.
+        </p>
+      </div>
+      <div class="ed-list">
+        <article class="ed-item reveal">
+          <div class="ed-item__num">01</div>
+          <div>
+            <h3>Education vs. evolving skills</h3>
+            <p>
+              Artificial intelligence and data-driven methods are reshaping finance and consulting faster than
+              curricula can adapt. Domain expertise alone no longer suffices — adaptability, quantitative
+              fluency, and interdisciplinary reasoning have become the true currency.
+            </p>
+          </div>
         </article>
-        <article class="card">
-          <div class="card__index">02</div>
-          <h3>Fragmented talent &amp; access</h3>
-          <p>
-            A physicist with a passion for markets, or a computer scientist drawn to investment management, often
-            has no clear pathway in. In Switzerland and the DACH region, opportunities exist but remain scattered
-            across institutions, companies, and disciplines.
-          </p>
+        <article class="ed-item reveal" data-delay="1">
+          <div class="ed-item__num">02</div>
+          <div>
+            <h3>Fragmented talent &amp; access</h3>
+            <p>
+              A physicist drawn to markets, or a computer scientist fascinated by investment management, often
+              has no clear way in. Across Switzerland and the DACH region, opportunities exist — but remain
+              scattered across institutions, firms, and disciplines.
+            </p>
+          </div>
+        </article>
+        <article class="ed-item reveal" data-delay="2">
+          <div class="ed-item__num">03</div>
+          <div>
+            <h3>Theory without application</h3>
+            <p>
+              Brilliant minds too rarely meet real capital, real mandates, and real decisions while still at
+              university. We bridge that distance — through research, competition, and genuine industry access.
+            </p>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Vision / Goal -->
-  <section class="section section--alt" id="vision">
-    <div class="container vision__grid">
-      <div>
-        <p class="eyebrow">Our Goal</p>
-        <h2 class="section__title section__title--left">
-          A new generation of professionals — fluent in both finance and technology.
-        </h2>
-      </div>
-      <div class="vision__body">
-        <p>
-          We aim to redefine how financial and technical expertise are developed, integrated, and applied. By
-          combining interdisciplinary education, independent research, and practical industry engagement, we
-          cultivate professionals equipped with both financial insight and technical proficiency.
-        </p>
-        <p>
-          Our central objective is the <strong>reciprocal transfer of expertise</strong>: equipping finance and
-          economics students with advanced computational competencies, while giving technically oriented students
-          a deep understanding of markets, economic principles, and investment methodology.
-        </p>
-        <p class="vision__quote">
-          “The question is not whether traditional education is losing its value — but whether its structures
-          alone can prepare students for a future that is increasingly difficult to anticipate.”
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Objectives -->
-  <section class="section" id="objectives">
+  <!-- ============ PILLARS ============ -->
+  <section class="section section--panel" id="pillars">
     <div class="container">
-      <p class="eyebrow eyebrow--center">Strategic Objectives</p>
-      <h2 class="section__title">Four pillars, one integrated framework.</h2>
-      <div class="cards cards--2 pillars">
-        <article class="card card--pillar">
-          <div class="card__index">01</div>
+      <div class="section__head section__head--center">
+        <span class="kicker kicker--center">What We Are Building</span>
+        <h2 class="section__title">Four pillars. One standard: excellence.</h2>
+        <p class="section__desc">Each of these programmes is <strong>upcoming</strong> — to be launched by the founding board as the club takes shape.</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar reveal">
+          <div class="pillar__top"><span class="pillar__num">I</span><span class="upcoming-tag">Upcoming</span></div>
           <h3>Academic Collaboration</h3>
-          <p>
-            A cross-institutional network connecting students from leading universities — with initial efforts
-            targeting <strong>ETH Zurich</strong>, the <strong>University of St. Gallen</strong>, and
-            <strong>LMU Munich</strong>. Joint projects and events dissolve disciplinary and institutional
-            boundaries.
-          </p>
+          <p>A cross-institutional network connecting leading universities — with initial efforts targeting <strong>ETH Zürich</strong>, the <strong>University of St. Gallen</strong>, and <strong>LMU Munich</strong>. Joint projects and events dissolve disciplinary boundaries.</p>
+          <span class="pillar__line"></span>
         </article>
-        <article class="card card--pillar">
-          <div class="card__index">02</div>
+        <article class="pillar reveal" data-delay="1">
+          <div class="pillar__top"><span class="pillar__num">II</span><span class="upcoming-tag">Upcoming</span></div>
           <h3>Reciprocal Education</h3>
-          <p>
-            A student-led programme for the mutual exchange of knowledge. Technical students contribute
-            mathematics, programming, and AI; finance students introduce markets, economics, and investment —
-            through courses and interactive workshops.
-          </p>
+          <p>A student-led programme for the mutual exchange of knowledge. Technical students contribute mathematics, programming, and AI; finance students introduce markets, economics, and investment — through courses and workshops.</p>
+          <span class="pillar__line"></span>
         </article>
-        <article class="card card--pillar">
-          <div class="card__index">03</div>
+        <article class="pillar reveal" data-delay="2">
+          <div class="pillar__top"><span class="pillar__num">III</span><span class="upcoming-tag">Upcoming</span></div>
           <h3>Applied Research</h3>
-          <p>
-            Bridging theory and practice through extended case studies, trading competitions, and independent
-            financial research. Multi-day challenges with industry partners tackle real problems in banking,
-            asset management, and consulting.
-          </p>
+          <p>Bridging theory and practice through extended case studies, trading competitions, and independent financial research. Multi-day challenges with industry partners tackle real problems in banking, asset management, and consulting.</p>
+          <span class="pillar__line"></span>
         </article>
-        <article class="card card--pillar">
-          <div class="card__index">04</div>
+        <article class="pillar reveal" data-delay="3">
+          <div class="pillar__top"><span class="pillar__num">IV</span><span class="upcoming-tag">Upcoming</span></div>
           <h3>Industry &amp; Talent</h3>
-          <p>
-            Strategic relationships with financial institutions, consulting firms, and technology companies
-            across the DACH region — plus a rotational <strong>Mentor-Cycle</strong> connecting students with
-            experienced professionals every month.
-          </p>
+          <p>Strategic relationships with financial institutions, consulting firms, and technology companies across the DACH region — plus a rotational <strong>Mentor-Cycle</strong> connecting members with experienced professionals.</p>
+          <span class="pillar__line"></span>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Future -->
-  <section class="section section--dark" id="future">
+  <!-- ============ PARTNERS ============ -->
+  <section class="section" id="partners">
     <div class="container">
-      <p class="eyebrow eyebrow--center">Long-Term Vision</p>
-      <h2 class="section__title">From a student club to an independent institution.</h2>
-      <div class="timeline">
-        <div class="tl">
-          <div class="tl__dot"></div>
-          <h3>Expand the network</h3>
-          <p>Grow the university network and institutional partnerships to become an established part of the DACH early-career talent pipeline.</p>
+      <div class="section__head section__head--center">
+        <span class="kicker kicker--center">Upcoming Collaborations</span>
+        <h2 class="section__title">Building bridges to the institutions that move markets.</h2>
+        <p class="section__desc">We are cultivating partnerships across the full spectrum of global finance and advisory. All relationships below are <strong>upcoming</strong> as the club launches.</p>
+      </div>
+      <div class="partners__grid">
+        <div class="partner reveal">
+          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 21h18M5 21V10m14 11V10M4 10l8-6 8 6M9 21v-6h6v6"/></svg></div>
+          <div class="partner__label">Banks</div>
+          <div class="partner__sub">Global &amp; Private</div>
         </div>
-        <div class="tl">
-          <div class="tl__dot"></div>
-          <h3>Research &amp; investment division</h3>
-          <p>Dedicated analyst teams covering traditional and digital assets — publishing market reports and developing proprietary investment strategies.</p>
+        <div class="partner reveal" data-delay="1">
+          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 17l5-5 4 4 8-9M21 7v5h-5"/></svg></div>
+          <div class="partner__label">Venture Capital</div>
+          <div class="partner__sub">Early to Growth</div>
         </div>
-        <div class="tl">
-          <div class="tl__dot"></div>
-          <h3>A public platform</h3>
-          <p>Research publications, interviews, podcasts, and digital media making interdisciplinary perspectives accessible to a broader audience.</p>
+        <div class="partner reveal" data-delay="2">
+          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v20M5 7l7-4 7 4M5 7v10l7 4 7-4V7"/></svg></div>
+          <div class="partner__label">Private Equity</div>
+          <div class="partner__sub">Buyout &amp; Growth</div>
         </div>
-        <div class="tl">
-          <div class="tl__dot"></div>
-          <h3>Institutional independence</h3>
-          <p>A distinct identity and brand built on intellectual rigour, interdisciplinary excellence, and professional integrity.</p>
+        <div class="partner reveal" data-delay="3">
+          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20V8m5 12V4m5 16v-8m5 8V10"/></svg></div>
+          <div class="partner__label">Investment Banking</div>
+          <div class="partner__sub">M&amp;A &amp; Markets</div>
+        </div>
+        <div class="partner reveal" data-delay="3">
+          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18M3 12h18"/></svg></div>
+          <div class="partner__label">Consulting</div>
+          <div class="partner__sub">Strategy &amp; Advisory</div>
+        </div>
+      </div>
+      <p class="partners__note">Partnerships announced as they are confirmed. Interested firms are welcome to reach out.</p>
+    </div>
+  </section>
+
+  <!-- ============ VISION / ROADMAP ============ -->
+  <section class="section section--deep" id="vision">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="kicker kicker--center">The Long View</span>
+        <h2 class="section__title">From a student club to an institution.</h2>
+      </div>
+      <div class="roadmap">
+        <div class="phase reveal">
+          <div class="phase__tag">Phase I · Now</div>
+          <div>
+            <h3>The Founding</h3>
+            <p>Assembling a founding board and core membership at ETH Zürich. Defining identity, programmes, and the first wave of events and workshops.</p>
+          </div>
+        </div>
+        <div class="phase reveal" data-delay="1">
+          <div class="phase__tag">Phase II · Upcoming</div>
+          <div>
+            <h3>Network &amp; Partnerships</h3>
+            <p>Expanding across St. Gallen, LMU Munich, and the wider DACH region — establishing the first industry collaborations and the Mentor-Cycle.</p>
+          </div>
+        </div>
+        <div class="phase reveal" data-delay="2">
+          <div class="phase__tag">Phase III · Upcoming</div>
+          <div>
+            <h3>Research &amp; Investment Division</h3>
+            <p>Dedicated analyst teams covering traditional and digital assets — publishing market reports and developing proprietary investment strategies.</p>
+          </div>
+        </div>
+        <div class="phase reveal" data-delay="3">
+          <div class="phase__tag">Phase IV · Upcoming</div>
+          <div>
+            <h3>An Independent Institution</h3>
+            <p>A distinct brand built on intellectual rigour, interdisciplinary excellence, and professional integrity — a lasting part of Europe's early-career talent pipeline.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Team -->
+  <!-- ============ TEAM ============ -->
   <section class="section" id="team">
     <div class="container">
-      <p class="eyebrow eyebrow--center">Founders</p>
-      <h2 class="section__title">Built by students, for students.</h2>
+      <div class="section__head section__head--center">
+        <span class="kicker kicker--center">The Founders</span>
+        <h2 class="section__title">Founded by students who refuse to pick a lane.</h2>
+      </div>
       <div class="team">
-        <article class="member">
-          <div class="member__avatar">SJ</div>
-          <h3>Siran Jeyavijayaratnam</h3>
-          <p class="member__role">Co-Founder · ETH Zurich</p>
+        <article class="member reveal">
+          <div class="member__photo" data-initials="AS">
+            <!-- Replace src with your photo: <img src="assets/ansh.jpg" alt="Ansh Saini" /> -->
+            <span class="member__initials">AS</span>
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Ansh Saini</h3>
+            <p class="member__role">Co-Founder · ETH Zürich</p>
+            <p class="member__bio">Bridging quantitative rigour with real-world markets — leading the vision for an interdisciplinary finance community.</p>
+          </div>
         </article>
-        <article class="member">
-          <div class="member__avatar">AS</div>
-          <h3>Ansh Saini</h3>
-          <p class="member__role">Co-Founder · ETH Zurich</p>
+        <article class="member reveal" data-delay="1">
+          <div class="member__photo" data-initials="SJ">
+            <!-- Replace src with your photo: <img src="assets/siran.jpg" alt="Siran Jeyavijayaratnam" /> -->
+            <span class="member__initials">SJ</span>
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Siran Jeyavijayaratnam</h3>
+            <p class="member__role">Co-Founder · ETH Zürich</p>
+            <p class="member__bio">Connecting economics, technology, and investment thinking into a single, modern discipline.</p>
+          </div>
         </article>
       </div>
+      <p class="team__note">More to come — the founding board is forming now.</p>
     </div>
   </section>
 
-  <!-- Join / CTA -->
-  <section class="section cta" id="join">
-    <div class="container cta__inner">
-      <h2 class="cta__title">Think beyond your discipline.</h2>
-      <p class="cta__lead">
-        Whether you code or you trade, whether you solve equations or read markets — if you want to build the
-        future of finance and technology, we want to hear from you.
-      </p>
-      <a href="mailto:hello@example.com?subject=Joining%20Nexus%20ETH" class="btn btn--lg">Get in touch</a>
+  <!-- ============ JOIN / SIGN UP ============ -->
+  <section class="section section--panel join" id="join">
+    <div class="container join__inner">
+      <div class="join__copy reveal">
+        <span class="kicker">Now Recruiting</span>
+        <h2>We are looking for <span class="gold-text">founding board members.</span></h2>
+        <p>
+          This is the ground floor. Join a small, ambitious team at ETH Zürich and help shape a club built to
+          the highest standard — from identity and events to research and industry partnerships. More roles will
+          open as we grow.
+        </p>
+        <div class="join__badges">
+          <span class="role-badge role-badge--hot">Board Members — open now</span>
+          <span class="role-badge">General Members — soon</span>
+          <span class="role-badge">Analysts — soon</span>
+          <span class="role-badge">Partnerships — soon</span>
+        </div>
+      </div>
+
+      <form class="form reveal" data-delay="1" id="signupForm" novalidate>
+        <h3 class="form__title">Register your interest</h3>
+        <p class="form__sub">Founding-board applications reviewed on a rolling basis.</p>
+
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@ethz.ch" required />
+        </div>
+        <div class="field">
+          <label for="program">University &amp; programme</label>
+          <input type="text" id="program" name="program" placeholder="ETH Zürich — e.g. Computer Science, MSc" />
+        </div>
+        <div class="field">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option value="board">Founding Board Member</option>
+            <option value="general">General Membership (upcoming)</option>
+            <option value="analyst">Research / Analyst (upcoming)</option>
+            <option value="partner">Industry Partnership</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="note">A line about you <span style="text-transform:none;letter-spacing:0;color:var(--muted)">(optional)</span></label>
+          <textarea id="note" name="note" placeholder="What draws you to the intersection of finance and technology?"></textarea>
+        </div>
+        <button type="submit" class="btn btn--block">Submit Application</button>
+
+        <div class="form__ok" id="formOk">
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+          <h3>Thank you.</h3>
+          <p>Your interest has been registered. We'll be in touch as the founding board forms.</p>
+        </div>
+      </form>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div>
-        <span class="brand__mark">N</span>
-        <p class="footer__name">Nexus · ETH Zurich</p>
-        <p class="footer__note">An interdisciplinary student initiative for finance &amp; technology.</p>
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#top" class="brand">
+            <span class="brand__mark">F&amp;E</span>
+            <span class="brand__text">
+              <span class="brand__name">Finance &amp; Econ Club</span>
+              <span class="brand__sub">ETH Zürich</span>
+            </span>
+          </a>
+          <p>An upcoming student-led, nonprofit initiative uniting finance, economics, and technology at ETH Zürich.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <a href="#about">About</a>
+          <a href="#pillars">Pillars</a>
+          <a href="#partners">Partners</a>
+          <a href="#vision">Vision</a>
+          <a href="#team">Team</a>
+        </div>
+        <div class="footer__col">
+          <h4>Get Involved</h4>
+          <a href="#join">Apply to the Board</a>
+          <a href="#join">Membership (soon)</a>
+          <a href="#partners">Partner with us</a>
+          <a href="mailto:hello@example.com">Contact</a>
+        </div>
       </div>
-      <p class="footer__copy">© <span id="year"></span> Nexus Initiative. A student-led, nonprofit organisation.</p>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> ETH Finance &amp; Econ Club · A student-led, nonprofit initiative.</p>
+        <p>Not an official body of ETH Zürich · Launching soon</p>
+      </div>
     </div>
   </footer>
 
