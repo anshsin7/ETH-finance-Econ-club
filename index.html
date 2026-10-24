@@ -373,60 +373,24 @@
         </div>
       </div>
 
-      <!-- Submissions (including the CV file) go to our own free Vercel function at /api/apply,
-           which stores the CV in Vercel Blob and optionally emails you via Formspree.
-           See README.md → "Free CV uploads (Vercel Blob)". -->
-      <form class="form reveal" data-delay="1" id="signupForm"
-            action="/api/apply" method="POST"
-            enctype="multipart/form-data" novalidate>
-        <h3 class="form__title">Register your interest</h3>
-        <p class="form__sub">Founding-board applications reviewed on a rolling basis.</p>
+      <!-- Applications are handled by a free Google Form (CVs auto-save to Google Drive).
+           Set your form link in ONE place: the GOOGLE_FORM_URL constant in main.js.
+           The "Apply" button below and the two nav/hero buttons all open that form. -->
+      <div class="apply-card reveal" data-delay="1">
+        <h3 class="apply-card__title">Apply to the Founding Board</h3>
+        <p class="apply-card__sub">Our application takes a few minutes. You'll be able to tell us about yourself and <strong>attach your CV</strong> — we review every application personally.</p>
 
-        <div class="field">
-          <label for="name">Full name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@ethz.ch" required />
-        </div>
-        <div class="field">
-          <label for="program">Programme at ETH Zürich</label>
-          <input type="text" id="program" name="program" placeholder="e.g. Computer Science, BSc" />
-        </div>
-        <div class="field">
-          <label for="interest">I'm interested in</label>
-          <select id="interest" name="interest">
-            <option value="board">Founding Board Member</option>
-            <option value="general">General Membership (upcoming)</option>
-            <option value="analyst">Research / Analyst (upcoming)</option>
-            <option value="partner">Industry Partnership</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="note">A line about you <span style="text-transform:none;letter-spacing:0;color:var(--muted)">(optional)</span></label>
-          <textarea id="note" name="note" placeholder="What draws you to finance, and to IB/PE in particular?"></textarea>
-        </div>
-        <div class="field">
-          <label for="cv">Your CV <span style="text-transform:none;letter-spacing:0;color:var(--muted)">(PDF or Word · max 5&nbsp;MB · optional)</span></label>
-          <label class="dropzone" id="dropzone" for="cv">
-            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden />
-            <span class="dropzone__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 16V4m0 0L8 8m4-4l4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-            </span>
-            <span class="dropzone__text" id="dropText">Drag &amp; drop your CV, or <span class="dropzone__browse">browse</span></span>
-            <span class="dropzone__hint">PDF, DOC, DOCX — up to 5&nbsp;MB</span>
-          </label>
-          <p class="field__error" id="cvError"></p>
-        </div>
-        <button type="submit" class="btn btn--block">Submit Application</button>
+        <ul class="apply-card__list">
+          <li><span class="apply-card__dot"></span>Share your background &amp; programme at ETH Zürich</li>
+          <li><span class="apply-card__dot"></span>Tell us why finance — and IB/PE in particular</li>
+          <li><span class="apply-card__dot"></span>Upload your CV (PDF or Word)</li>
+        </ul>
 
-        <div class="form__ok" id="formOk">
-          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
-          <h3>Application received.</h3>
-          <p>Thank you for your interest in the <strong>ETH Finance &amp; Econ Club</strong>. We review every application personally — <strong>if your profile matches the club's values, we'll reach out to you soon.</strong></p>
-        </div>
-      </form>
+        <a href="#" class="btn btn--block js-apply" target="_blank" rel="noopener">Open the Application</a>
+        <p class="apply-card__note">
+          <strong>If your profile matches the club's values, we'll reach out to you soon.</strong>
+        </p>
+      </div>
     </div>
   </section>
 

@@ -36,50 +36,34 @@ Or simply open `index.html` in a browser.
 See [`assets/README.md`](assets/README.md). Short version: drop images in `assets/` and swap the
 initials `<span>` for an `<img src="assets/your-photo.jpg">` inside each `.member__photo`.
 
-## The application form (free, with CV uploads)
+## Applications & CV uploads — free via Google Form
 
-The board-application form includes a **CV upload** (drag-and-drop or browse, PDF/DOC/DOCX, max 5 MB,
-validated in the browser). The form POSTs everything — text fields **and** the CV file — to a small
-Vercel serverless function at [`/api/apply`](api/apply.js).
+Applications are handled by a **Google Form**, which is **100% free, unlimited, and stores every CV
+in your Google Drive** automatically (with all responses in a spreadsheet). No server, no cost.
 
-This is **completely free** on Vercel's Hobby tier:
+The site keeps its premium feel: the **"Open the Application"** button (and the Apply buttons) open your
+Google Form in a new tab.
 
-- the function invocation is free,
-- the CV is stored in **Vercel Blob** (generous free allowance — plenty for a student club),
-- and the text details can optionally be emailed to you via a free Formspree endpoint.
+### Setup (one-time, ~5 minutes)
 
-### Free setup (one-time, ~3 minutes)
+1. Go to [forms.google.com](https://forms.google.com) and create a new form, e.g. *"ETH Finance & Econ
+   Club — Board Application."*
+2. Add your questions — name, email, programme at ETH Zürich, why finance / IB & PE, etc.
+3. Add a **File upload** question for the CV (Google Forms → *+* → **File upload**). This requires the
+   form owner to have a Google account with Drive; uploaded CVs save straight to your Drive.
+4. Click **Send → 🔗 (link)** and copy the link.
+5. Open `main.js`, find `GOOGLE_FORM_URL` near the top of the applications section, and paste your link:
 
-1. **Add Vercel Blob** to your project: in the Vercel dashboard →
-   **Storage → Create → Blob**. Vercel automatically adds the `BLOB_READ_WRITE_TOKEN`
-   environment variable to the project.
-2. **(Optional) email notifications:** add an environment variable
-   `FORMSPREE_ENDPOINT = https://formspree.io/f/xaqbpoel` (your existing free Formspree form).
-   Each application then also lands in your email, with a link to the stored CV.
-3. **Redeploy.** That's it — applications and CVs are now received and stored at no cost.
+   ```js
+   const GOOGLE_FORM_URL = "https://forms.gle/your-link-here";
+   ```
 
-Where the CVs live: Vercel dashboard → **Storage → your Blob store** (files under `cvs/`). Each
-application's response also contains the direct CV URL.
+6. Commit & redeploy. Done — applications and CVs now flow into Google Drive for free.
 
-> **Prefer zero code / zero setup?** A **Google Form** is also 100% free and stores CVs in Google Drive
-> automatically — just link the "Apply" buttons to it. The trade-off is that it sends visitors to a
-> Google-branded page instead of keeping them on your premium site.
+Until you set `GOOGLE_FORM_URL`, the Apply button shows a friendly reminder instead of a dead link.
 
-### Local development
-
-```bash
-npm install
-npm run dev     # runs `vercel dev` — requires the Vercel CLI (`npm i -g vercel`)
-```
-
-Plain static preview (form submit won't hit the function):
-
-```bash
-python3 -m http.server 8000
-```
-
-> Privacy note: the CV **file** is never kept in the browser; only the text fields are cached in
-> `localStorage` as a testing fallback.
+> Responses & CVs live in **Google Drive** (and the linked Google Sheet). Review them there, or connect
+> a sheet for a simple applicant tracker.
 
 ## Customising
 
