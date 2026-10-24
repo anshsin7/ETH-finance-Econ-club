@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ETH Finance &amp; Econ Club — Interdisciplinary Finance, Research &amp; Technology</title>
-  <meta name="description" content="An upcoming student-led initiative at ETH Zurich uniting the world's best minds across finance, economics, and technology — interdisciplinary education, research, and investment." />
+  <title>ETH Finance &amp; Econ Club — Bringing Finance to ETH Zürich</title>
+  <meta name="description" content="A student-led initiative at ETH Zürich building the finance ties Europe lacks. Focused on Investment Banking, Private Equity, and the intersection of finance and technology." />
   <meta property="og:title" content="ETH Finance & Econ Club" />
-  <meta property="og:description" content="An upcoming student-led initiative at ETH Zurich bridging finance, economics, and technology." />
+  <meta property="og:description" content="A student-led initiative at ETH Zürich building real finance ties in Europe — Investment Banking, Private Equity, and beyond." />
   <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -18,8 +19,21 @@
   <!-- ============ NAV ============ -->
   <header class="nav" id="top">
     <div class="container nav__inner">
-      <a href="#top" class="brand">
-        <span class="brand__mark">F&amp;E</span>
+      <a href="#top" class="brand" aria-label="ETH Finance & Econ Club — home">
+        <span class="brand__logo" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="44" height="44">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e7cd8f"/>
+                <stop offset="1" stop-color="#9c8142"/>
+              </linearGradient>
+            </defs>
+            <polygon points="24,3 43,13.5 43,34.5 24,45 5,34.5 5,13.5" fill="none" stroke="url(#g)" stroke-width="1.4"/>
+            <polygon points="24,9 38,16.5 38,31.5 24,39 10,31.5 10,16.5" fill="none" stroke="url(#g)" stroke-width="0.8" opacity="0.5"/>
+            <path d="M18 31 L18 17 L26 17 M18 24 L24 24" fill="none" stroke="url(#g)" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M30 17 L30 31 M30 17 L31.5 17" fill="none" stroke="url(#g)" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
         <span class="brand__text">
           <span class="brand__name">Finance &amp; Econ Club</span>
           <span class="brand__sub">ETH Zürich</span>
@@ -29,6 +43,7 @@
         <a href="#about">About</a>
         <a href="#pillars">Pillars</a>
         <a href="#partners">Partners</a>
+        <a href="#research">Research</a>
         <a href="#vision">Vision</a>
         <a href="#team">Team</a>
         <a href="#join" class="btn">Apply to the Board</a>
@@ -45,29 +60,30 @@
     <div class="container hero__inner">
       <div class="hero__tag"><span class="upcoming-tag">Launching soon · ETH Zürich</span></div>
       <h1 class="hero__title">
-        The meeting point of<br />
-        <span class="gold-text"><em>capital</em> &amp; <em>intellect.</em></span>
+        Bringing finance<br />
+        to <span class="gold-text"><em>ETH Zürich.</em></span>
       </h1>
       <p class="hero__lead">
-        An upcoming student-led initiative at ETH Zürich, uniting the world's most capable minds across
-        finance, economics, and technology — where rigorous analysis meets real-world ambition.
+        ETH Zürich produces some of the world's finest technical minds — yet, like most of Europe, it has
+        almost no bridge to high finance. We are the student-led initiative building that bridge, with a focus
+        on <strong>Investment Banking</strong> and <strong>Private Equity</strong>.
       </p>
       <div class="hero__cta">
         <a href="#join" class="btn">Apply to the Founding Board</a>
-        <a href="#about" class="btn btn--ghost">Discover the Vision</a>
+        <a href="#about" class="btn btn--ghost">Why we exist</a>
       </div>
       <div class="hero__meta">
         <div class="stat">
+          <div class="stat__num">ETH</div>
+          <div class="stat__label">Born at ETH Zürich</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">IB&nbsp;·&nbsp;PE</div>
+          <div class="stat__label">Our focus in finance</div>
+        </div>
+        <div class="stat">
           <div class="stat__num">2026</div>
-          <div class="stat__label">Founding year — joining us early</div>
-        </div>
-        <div class="stat">
-          <div class="stat__num">∞</div>
-          <div class="stat__label">Interdisciplinary ambition</div>
-        </div>
-        <div class="stat">
-          <div class="stat__num">DACH</div>
-          <div class="stat__label">Regional reach &amp; beyond</div>
+          <div class="stat__label">Founding year — join us early</div>
         </div>
       </div>
     </div>
@@ -78,20 +94,20 @@
     <div class="ticker__track">
       <span class="ticker__item">Investment Banking</span>
       <span class="ticker__item">Private Equity</span>
+      <span class="ticker__item">ETH Zürich</span>
       <span class="ticker__item">Venture Capital</span>
       <span class="ticker__item">Quantitative Research</span>
       <span class="ticker__item">Asset Management</span>
       <span class="ticker__item">Strategy Consulting</span>
-      <span class="ticker__item">Digital Assets</span>
-      <span class="ticker__item">Macroeconomics</span>
+      <span class="ticker__item">Mergers &amp; Acquisitions</span>
       <span class="ticker__item">Investment Banking</span>
       <span class="ticker__item">Private Equity</span>
+      <span class="ticker__item">ETH Zürich</span>
       <span class="ticker__item">Venture Capital</span>
       <span class="ticker__item">Quantitative Research</span>
       <span class="ticker__item">Asset Management</span>
       <span class="ticker__item">Strategy Consulting</span>
-      <span class="ticker__item">Digital Assets</span>
-      <span class="ticker__item">Macroeconomics</span>
+      <span class="ticker__item">Mergers &amp; Acquisitions</span>
     </div>
   </div>
 
@@ -99,44 +115,46 @@
   <section class="section" id="about">
     <div class="container split">
       <div class="split__aside">
-        <span class="kicker">The Thesis</span>
-        <h2 class="section__title">The world changed faster than the curriculum.</h2>
+        <span class="kicker">Why We Exist</span>
+        <h2 class="section__title">Europe's best talent. Finance's weakest bridge.</h2>
         <p class="section__desc">
-          ETH Zürich attracts some of the most capable students in the world. Yet the pathways to apply that
-          talent across finance, economics, and technology remain fragmented. We exist to close that gap —
-          building the complete, modern financier.
+          In the UK and US, elite universities feed directly into Wall Street and the City through deep,
+          structured finance networks. <strong>ETH Zürich</strong> — and most of continental Europe — has
+          almost none of that. We are here to change it: to give ETH's exceptional students a real path into
+          Investment Banking, Private Equity, and the institutions that move capital.
         </p>
       </div>
       <div class="ed-list">
         <article class="ed-item reveal">
           <div class="ed-item__num">01</div>
           <div>
-            <h3>Education vs. evolving skills</h3>
+            <h3>Europe lags the UK &amp; US on finance ties</h3>
             <p>
-              Artificial intelligence and data-driven methods are reshaping finance and consulting faster than
-              curricula can adapt. Domain expertise alone no longer suffices — adaptability, quantitative
-              fluency, and interdisciplinary reasoning have become the true currency.
+              Oxbridge, the Ivies, and the target-school system plug students straight into IB and PE. At
+              <strong>ETH Zürich</strong> and across Europe, those ties are weak or non-existent — brilliant
+              students are left without a map into high finance.
             </p>
           </div>
         </article>
         <article class="ed-item reveal" data-delay="1">
           <div class="ed-item__num">02</div>
           <div>
-            <h3>Fragmented talent &amp; access</h3>
+            <h3>World-class minds, no front door</h3>
             <p>
-              A physicist drawn to markets, or a computer scientist fascinated by investment management, often
-              has no clear way in. Across Switzerland and the DACH region, opportunities exist — but remain
-              scattered across institutions, firms, and disciplines.
+              <strong>ETH Zürich</strong> is one of the top universities on earth, with extraordinary analytical
+              talent in CS, maths, and engineering. Yet a student drawn to markets, deals, or investing often
+              has nowhere to start. We build that front door.
             </p>
           </div>
         </article>
         <article class="ed-item reveal" data-delay="2">
           <div class="ed-item__num">03</div>
           <div>
-            <h3>Theory without application</h3>
+            <h3>Finance &amp; technology, finally together</h3>
             <p>
-              Brilliant minds too rarely meet real capital, real mandates, and real decisions while still at
-              university. We bridge that distance — through research, competition, and genuine industry access.
+              The future of IB and PE is quantitative. ETH students already have the technical edge — we pair it
+              with real financial fluency and direct industry access, creating a profile few places in Europe
+              can match.
             </p>
           </div>
         </article>
@@ -148,33 +166,33 @@
   <section class="section section--panel" id="pillars">
     <div class="container">
       <div class="section__head section__head--center">
-        <span class="kicker kicker--center">What We Are Building</span>
+        <span class="kicker kicker--center">What We Are Building at ETH</span>
         <h2 class="section__title">Four pillars. One standard: excellence.</h2>
-        <p class="section__desc">Each of these programmes is <strong>upcoming</strong> — to be launched by the founding board as the club takes shape.</p>
+        <p class="section__desc">Each programme is <strong>upcoming</strong> — to be launched by the founding board as the club takes shape at <strong>ETH Zürich</strong>.</p>
       </div>
       <div class="pillars">
         <article class="pillar reveal">
           <div class="pillar__top"><span class="pillar__num">I</span><span class="upcoming-tag">Upcoming</span></div>
-          <h3>Academic Collaboration</h3>
-          <p>A cross-institutional network connecting leading universities — with initial efforts targeting <strong>ETH Zürich</strong>, the <strong>University of St. Gallen</strong>, and <strong>LMU Munich</strong>. Joint projects and events dissolve disciplinary boundaries.</p>
+          <h3>Finance Education</h3>
+          <p>Bringing real financial training to <strong>ETH Zürich</strong> — IB &amp; PE fundamentals, valuation, LBOs, and deal analysis — taught student-to-student alongside the technical strengths ETH is known for.</p>
           <span class="pillar__line"></span>
         </article>
         <article class="pillar reveal" data-delay="1">
           <div class="pillar__top"><span class="pillar__num">II</span><span class="upcoming-tag">Upcoming</span></div>
-          <h3>Reciprocal Education</h3>
-          <p>A student-led programme for the mutual exchange of knowledge. Technical students contribute mathematics, programming, and AI; finance students introduce markets, economics, and investment — through courses and workshops.</p>
+          <h3>Industry Access</h3>
+          <p>The bridge Europe lacks: direct lines to banks, PE funds, and VCs. Networking events, insight sessions, and a recruiting pipeline built to put <strong>ETH Zürich</strong> on the map in high finance.</p>
           <span class="pillar__line"></span>
         </article>
         <article class="pillar reveal" data-delay="2">
           <div class="pillar__top"><span class="pillar__num">III</span><span class="upcoming-tag">Upcoming</span></div>
           <h3>Applied Research</h3>
-          <p>Bridging theory and practice through extended case studies, trading competitions, and independent financial research. Multi-day challenges with industry partners tackle real problems in banking, asset management, and consulting.</p>
+          <p>Stock pitches, LBO models, case competitions, and independent market research — giving <strong>ETH</strong> students real reps on real deals before they ever interview.</p>
           <span class="pillar__line"></span>
         </article>
         <article class="pillar reveal" data-delay="3">
           <div class="pillar__top"><span class="pillar__num">IV</span><span class="upcoming-tag">Upcoming</span></div>
-          <h3>Industry &amp; Talent</h3>
-          <p>Strategic relationships with financial institutions, consulting firms, and technology companies across the DACH region — plus a rotational <strong>Mentor-Cycle</strong> connecting members with experienced professionals.</p>
+          <h3>Network &amp; Mentorship</h3>
+          <p>Connecting ETH students with alumni and professionals in IB and PE through a rotational <strong>Mentor-Cycle</strong> — and partner clubs across St. Gallen, LMU Munich, and the wider DACH region.</p>
           <span class="pillar__line"></span>
         </article>
       </div>
@@ -186,29 +204,29 @@
     <div class="container">
       <div class="section__head section__head--center">
         <span class="kicker kicker--center">Upcoming Collaborations</span>
-        <h2 class="section__title">Building bridges to the institutions that move markets.</h2>
-        <p class="section__desc">We are cultivating partnerships across the full spectrum of global finance and advisory. All relationships below are <strong>upcoming</strong> as the club launches.</p>
+        <h2 class="section__title">Connecting ETH Zürich to the institutions that move markets.</h2>
+        <p class="section__desc">We are cultivating partnerships across the full spectrum of global finance and advisory — the ties that have long bypassed continental Europe. All relationships below are <strong>upcoming</strong> as the club launches.</p>
       </div>
       <div class="partners__grid">
         <div class="partner reveal">
-          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 21h18M5 21V10m14 11V10M4 10l8-6 8 6M9 21v-6h6v6"/></svg></div>
-          <div class="partner__label">Banks</div>
-          <div class="partner__sub">Global &amp; Private</div>
+          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20V8m5 12V4m5 16v-8m5 8V10"/></svg></div>
+          <div class="partner__label">Investment Banking</div>
+          <div class="partner__sub">M&amp;A &amp; Markets</div>
         </div>
         <div class="partner reveal" data-delay="1">
-          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 17l5-5 4 4 8-9M21 7v5h-5"/></svg></div>
-          <div class="partner__label">Venture Capital</div>
-          <div class="partner__sub">Early to Growth</div>
-        </div>
-        <div class="partner reveal" data-delay="2">
           <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v20M5 7l7-4 7 4M5 7v10l7 4 7-4V7"/></svg></div>
           <div class="partner__label">Private Equity</div>
           <div class="partner__sub">Buyout &amp; Growth</div>
         </div>
+        <div class="partner reveal" data-delay="2">
+          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 21h18M5 21V10m14 11V10M4 10l8-6 8 6M9 21v-6h6v6"/></svg></div>
+          <div class="partner__label">Banks</div>
+          <div class="partner__sub">Global &amp; Private</div>
+        </div>
         <div class="partner reveal" data-delay="3">
-          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20V8m5 12V4m5 16v-8m5 8V10"/></svg></div>
-          <div class="partner__label">Investment Banking</div>
-          <div class="partner__sub">M&amp;A &amp; Markets</div>
+          <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 17l5-5 4 4 8-9M21 7v5h-5"/></svg></div>
+          <div class="partner__label">Venture Capital</div>
+          <div class="partner__sub">Early to Growth</div>
         </div>
         <div class="partner reveal" data-delay="3">
           <div class="partner__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18M3 12h18"/></svg></div>
@@ -216,7 +234,48 @@
           <div class="partner__sub">Strategy &amp; Advisory</div>
         </div>
       </div>
-      <p class="partners__note">Partnerships announced as they are confirmed. Interested firms are welcome to reach out.</p>
+      <p class="partners__note">Partnerships announced as they are confirmed. Firms interested in engaging ETH Zürich talent are welcome to reach out.</p>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH / STUDIES & BLOG ============ -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="kicker kicker--center">Studies &amp; Insights</span>
+        <h2 class="section__title">Research from the ETH Zürich community.</h2>
+        <p class="section__desc">Market studies, deal breakdowns, and essays on finance &amp; technology — written by members. Our first pieces are <strong>upcoming</strong>; the archive begins at launch.</p>
+      </div>
+      <div class="blog">
+        <article class="post reveal">
+          <div class="post__top">
+            <span class="post__tag">Study</span>
+            <span class="upcoming-tag">Upcoming</span>
+          </div>
+          <h3>The European Finance Gap</h3>
+          <p>Why continental universities — ETH Zürich included — trail the UK and US on finance recruiting, and what it would take to close it.</p>
+          <span class="post__meta">Market Study · Coming soon</span>
+        </article>
+        <article class="post reveal" data-delay="1">
+          <div class="post__top">
+            <span class="post__tag">Primer</span>
+            <span class="upcoming-tag">Upcoming</span>
+          </div>
+          <h3>LBOs, Explained for Engineers</h3>
+          <p>A technically-minded introduction to leveraged buyouts — written for the quantitative strengths ETH students already bring.</p>
+          <span class="post__meta">Private Equity · Coming soon</span>
+        </article>
+        <article class="post reveal" data-delay="2">
+          <div class="post__top">
+            <span class="post__tag">Essay</span>
+            <span class="upcoming-tag">Upcoming</span>
+          </div>
+          <h3>When Finance Meets Code</h3>
+          <p>How quantitative and technical talent is reshaping investment banking and private equity — and why ETH is positioned to lead.</p>
+          <span class="post__meta">Finance &amp; Tech · Coming soon</span>
+        </article>
+      </div>
+      <p class="partners__note">Want to contribute a study or essay? Join the club and pitch your idea.</p>
     </div>
   </section>
 
@@ -225,35 +284,35 @@
     <div class="container">
       <div class="section__head section__head--center">
         <span class="kicker kicker--center">The Long View</span>
-        <h2 class="section__title">From a student club to an institution.</h2>
+        <h2 class="section__title">From an ETH club to an institution.</h2>
       </div>
       <div class="roadmap">
         <div class="phase reveal">
           <div class="phase__tag">Phase I · Now</div>
           <div>
-            <h3>The Founding</h3>
-            <p>Assembling a founding board and core membership at ETH Zürich. Defining identity, programmes, and the first wave of events and workshops.</p>
+            <h3>The Founding at ETH Zürich</h3>
+            <p>Assembling a founding board and core membership at <strong>ETH Zürich</strong>. Defining identity, programmes, and the first wave of IB/PE-focused events and workshops.</p>
           </div>
         </div>
         <div class="phase reveal" data-delay="1">
           <div class="phase__tag">Phase II · Upcoming</div>
           <div>
-            <h3>Network &amp; Partnerships</h3>
-            <p>Expanding across St. Gallen, LMU Munich, and the wider DACH region — establishing the first industry collaborations and the Mentor-Cycle.</p>
+            <h3>Industry Ties &amp; Network</h3>
+            <p>Securing the first partnerships with banks and PE funds, launching the Mentor-Cycle, and linking up with peer clubs at St. Gallen, LMU Munich, and across the DACH region.</p>
           </div>
         </div>
         <div class="phase reveal" data-delay="2">
           <div class="phase__tag">Phase III · Upcoming</div>
           <div>
             <h3>Research &amp; Investment Division</h3>
-            <p>Dedicated analyst teams covering traditional and digital assets — publishing market reports and developing proprietary investment strategies.</p>
+            <p>Dedicated analyst teams covering traditional and digital assets — publishing market reports and developing proprietary investment strategies under the ETH name.</p>
           </div>
         </div>
         <div class="phase reveal" data-delay="3">
           <div class="phase__tag">Phase IV · Upcoming</div>
           <div>
-            <h3>An Independent Institution</h3>
-            <p>A distinct brand built on intellectual rigour, interdisciplinary excellence, and professional integrity — a lasting part of Europe's early-career talent pipeline.</p>
+            <h3>Europe's Finance Front Door</h3>
+            <p>A distinct brand built on intellectual rigour and integrity — making <strong>ETH Zürich</strong> a recognised feeder into high finance, and a model for the rest of Europe.</p>
           </div>
         </div>
       </div>
@@ -265,29 +324,29 @@
     <div class="container">
       <div class="section__head section__head--center">
         <span class="kicker kicker--center">The Founders</span>
-        <h2 class="section__title">Founded by students who refuse to pick a lane.</h2>
+        <h2 class="section__title">Built by ETH Zürich students who refuse to pick a lane.</h2>
       </div>
       <div class="team">
         <article class="member reveal">
           <div class="member__photo" data-initials="AS">
-            <!-- Replace src with your photo: <img src="assets/ansh.jpg" alt="Ansh Saini" /> -->
+            <!-- Replace with your photo: <img src="assets/ansh.jpg" alt="Ansh Saini" /> -->
             <span class="member__initials">AS</span>
           </div>
           <div class="member__body">
             <h3 class="member__name">Ansh Saini</h3>
-            <p class="member__role">Co-Founder · ETH Zürich</p>
-            <p class="member__bio">Bridging quantitative rigour with real-world markets — leading the vision for an interdisciplinary finance community.</p>
+            <p class="member__role">Co-Founder · BSc Computer Science, ETH Zürich</p>
+            <p class="member__bio">Computer Science student at <strong>ETH Zürich</strong> and Investment Analyst at <strong>S2S</strong>, with a deep interest in Investment Banking and Private Equity. Bridging quantitative rigour with real-world markets.</p>
           </div>
         </article>
         <article class="member reveal" data-delay="1">
           <div class="member__photo" data-initials="SJ">
-            <!-- Replace src with your photo: <img src="assets/siran.jpg" alt="Siran Jeyavijayaratnam" /> -->
+            <!-- Replace with your photo: <img src="assets/siran.jpg" alt="Siran Jeyavijayaratnam" /> -->
             <span class="member__initials">SJ</span>
           </div>
           <div class="member__body">
             <h3 class="member__name">Siran Jeyavijayaratnam</h3>
-            <p class="member__role">Co-Founder · ETH Zürich</p>
-            <p class="member__bio">Connecting economics, technology, and investment thinking into a single, modern discipline.</p>
+            <p class="member__role">Co-Founder · BSc Computer Science, ETH Zürich</p>
+            <p class="member__bio">Computer Science student at <strong>ETH Zürich</strong> and high-school valedictorian, with a strong passion for finance — particularly Investment Banking and Private Equity. Pairing technical depth with market instinct.</p>
           </div>
         </article>
       </div>
@@ -299,12 +358,12 @@
   <section class="section section--panel join" id="join">
     <div class="container join__inner">
       <div class="join__copy reveal">
-        <span class="kicker">Now Recruiting</span>
+        <span class="kicker">Now Recruiting at ETH Zürich</span>
         <h2>We are looking for <span class="gold-text">founding board members.</span></h2>
         <p>
-          This is the ground floor. Join a small, ambitious team at ETH Zürich and help shape a club built to
-          the highest standard — from identity and events to research and industry partnerships. More roles will
-          open as we grow.
+          This is the ground floor. Join a small, ambitious team at <strong>ETH Zürich</strong> and help build
+          the finance bridge Europe has been missing — from identity and events to IB/PE partnerships and
+          research. More roles will open as we grow.
         </p>
         <div class="join__badges">
           <span class="role-badge role-badge--hot">Board Members — open now</span>
@@ -314,7 +373,10 @@
         </div>
       </div>
 
-      <form class="form reveal" data-delay="1" id="signupForm" novalidate>
+      <!-- IMPORTANT: replace FORM_ID below with your Formspree endpoint to receive real submissions.
+           See README.md → "Wiring up the sign-up form". -->
+      <form class="form reveal" data-delay="1" id="signupForm"
+            action="https://formspree.io/f/FORM_ID" method="POST" novalidate>
         <h3 class="form__title">Register your interest</h3>
         <p class="form__sub">Founding-board applications reviewed on a rolling basis.</p>
 
@@ -327,8 +389,8 @@
           <input type="email" id="email" name="email" placeholder="you@ethz.ch" required />
         </div>
         <div class="field">
-          <label for="program">University &amp; programme</label>
-          <input type="text" id="program" name="program" placeholder="ETH Zürich — e.g. Computer Science, MSc" />
+          <label for="program">Programme at ETH Zürich</label>
+          <input type="text" id="program" name="program" placeholder="e.g. Computer Science, BSc" />
         </div>
         <div class="field">
           <label for="interest">I'm interested in</label>
@@ -341,7 +403,7 @@
         </div>
         <div class="field">
           <label for="note">A line about you <span style="text-transform:none;letter-spacing:0;color:var(--muted)">(optional)</span></label>
-          <textarea id="note" name="note" placeholder="What draws you to the intersection of finance and technology?"></textarea>
+          <textarea id="note" name="note" placeholder="What draws you to finance, and to IB/PE in particular?"></textarea>
         </div>
         <button type="submit" class="btn btn--block">Submit Application</button>
 
@@ -360,19 +422,26 @@
       <div class="footer__top">
         <div class="footer__brand">
           <a href="#top" class="brand">
-            <span class="brand__mark">F&amp;E</span>
+            <span class="brand__logo" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40">
+                <polygon points="24,3 43,13.5 43,34.5 24,45 5,34.5 5,13.5" fill="none" stroke="#c7a763" stroke-width="1.4"/>
+                <path d="M18 31 L18 17 L26 17 M18 24 L24 24" fill="none" stroke="#c7a763" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M30 17 L30 31 M30 17 L31.5 17" fill="none" stroke="#c7a763" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
             <span class="brand__text">
               <span class="brand__name">Finance &amp; Econ Club</span>
               <span class="brand__sub">ETH Zürich</span>
             </span>
           </a>
-          <p>An upcoming student-led, nonprofit initiative uniting finance, economics, and technology at ETH Zürich.</p>
+          <p>A student-led, nonprofit initiative at ETH Zürich — building the finance ties Europe lacks, with a focus on Investment Banking and Private Equity.</p>
         </div>
         <div class="footer__col">
           <h4>Explore</h4>
           <a href="#about">About</a>
           <a href="#pillars">Pillars</a>
           <a href="#partners">Partners</a>
+          <a href="#research">Research</a>
           <a href="#vision">Vision</a>
           <a href="#team">Team</a>
         </div>

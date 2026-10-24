@@ -36,12 +36,24 @@ Or simply open `index.html` in a browser.
 See [`assets/README.md`](assets/README.md). Short version: drop images in `assets/` and swap the
 initials `<span>` for an `<img src="assets/your-photo.jpg">` inside each `.member__photo`.
 
-## Wiring up the sign-up form
+## Wiring up the sign-up form (IMPORTANT)
 
-The form currently validates and stores submissions in the browser's `localStorage` (so nothing is lost
-during launch). To collect real applications, point it at a backend — e.g. a
-[Formspree](https://formspree.io) endpoint or a Google Form — by setting the form's `action`/`method`
-or replacing the submit handler in `main.js`.
+**Out of the box the form does NOT email you anything** — it only saves a copy in the visitor's own
+browser (`localStorage`) as a testing fallback. To actually receive applications, connect it to a
+backend. The quickest option is **Formspree** (free tier, ~2 minutes):
+
+1. Create a free account at [formspree.io](https://formspree.io).
+2. Create a new form — you'll get an endpoint like `https://formspree.io/f/abcdwxyz`.
+3. In `index.html`, find the sign-up `<form>` and replace `FORM_ID` in its `action`:
+
+   ```html
+   <form ... action="https://formspree.io/f/abcdwxyz" method="POST" ...>
+   ```
+
+4. Deploy. Every submission now arrives in your email (and the Formspree dashboard).
+
+`main.js` already handles the rest: it POSTs via `fetch`, shows the "Thank you" state on success, and
+re-enables the button on failure. Prefer a Google Form instead? Just link the "Apply" buttons to it.
 
 ## Customising
 
